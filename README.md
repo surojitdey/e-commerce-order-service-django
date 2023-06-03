@@ -25,11 +25,11 @@ Following are the API endpoints:
 1.  http://localhost:8000/order-service/orders/
   - Method: GET
   - Return a list of all orders with their details including nested items.
-  - Authentication Token needed. <code>Authorization: Token <token></code>
+  - Authentication Token needed. <code>Authorization: Token token</code>
 2.  http://localhost:8000/order-service/orders/{id}
   - Method: GET
   - Retrieve a specific order by its ID. Response also include the nested items.
-  - Authentication Token needed. <code>Authorization: Token <token></code>
+  - Authentication Token needed. <code>Authorization: Token token</code>
 3.  http://localhost:8000/order-service/orders/
   - Method: POST
   - Create a new order.
@@ -40,18 +40,18 @@ Following are the API endpoints:
         {"name": "Item 2", "quantity": 1, "price": 15.0}
       ]
     }
-  - Authentication Token needed. <code>Authorization: Token <token></code>
+  - Authentication Token needed. <code>Authorization: Token token</code>
 4.  http://localhost:8000/order-service/orders/{id}/update_status/
   - Method: PUT
   - Update status of an order.
   - Body eg: {
       "status": "SHIPPED"
     }
-  - Authentication Token needed. <code>Authorization: Token <token></code>
+  - Authentication Token needed. <code>Authorization: Token token</code>
 5.  http://localhost:8000/v1/auth/login/username/
   - Method: POST
   - Login API for creting token for authentication and authorization.
-  - Body data: { "username": <username>, "password": <password> }
+  - Body data: { "username": username, "password": password }
   
 > ***Note: Create a superuser before testing all the APIs. <code>python manage.py createsuperuser<code>
  
